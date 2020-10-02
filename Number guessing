@@ -1,0 +1,21 @@
+print("******Hello welcome to the number guessing game******")
+print("******Developed by Shubahm Kanzariya******")
+import random
+number=random.randint(1,30)
+chances=0
+print("guess a number(between 1 to 30):")
+while chances<5:
+    guess=int(input("enter your guess: "))
+    if guess == number:
+        print("congratulation you won!!!!")
+        break
+    elif guess<number:
+        print("your guess was too low")
+    else:
+        print("your guess was too high")
+    chances += 1
+    print("chances left:",5-chances)
+if guess==number:
+    print("You win!!!!")
+else:
+    print("You loss!!! The number is:",number)
